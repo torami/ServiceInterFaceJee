@@ -3,13 +3,11 @@ package com.disp.servlets;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.disp.dao.SignalementDAO;
 
 
@@ -93,7 +91,7 @@ public class Signalement extends HttpServlet {
 		request.setAttribute( ATT_ERREURS, erreurs );
 		request.setAttribute( ATT_RESULTAT, resultat );
 		/*Sauvegarder les datas dans la base de données  */
-//		SignalementDAO.create(1,"","","","","",1);
+//		SignalementDAO.create(1,importance,objet,description,commentaire,adresse,1);
 
 		/* Transmission de la paire d'objets request/response à notre JSP */
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );

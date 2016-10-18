@@ -19,7 +19,7 @@
       <br />
       <br />
     
-        <form method="post" action="signal">
+        <form method="post" action="signalement">
             <fieldset>
                 <legend>Nouveau signalement</legend>
                 <p>Vous pouvez signaler un incident par ce formulaire.</p>
