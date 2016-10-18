@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.disp.dao.SignalementDAO;
+
 
 @WebServlet("/Signalement")
 public class Signalement extends HttpServlet {
@@ -90,6 +92,8 @@ public class Signalement extends HttpServlet {
 		/* Stockage du résultat et des messages d'erreur dans l'objet request */
 		request.setAttribute( ATT_ERREURS, erreurs );
 		request.setAttribute( ATT_RESULTAT, resultat );
+		/*Sauvegarder les datas dans la base de données  */
+//		SignalementDAO.create(1,"","","","","",1);
 
 		/* Transmission de la paire d'objets request/response à notre JSP */
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
